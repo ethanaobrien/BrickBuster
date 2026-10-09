@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         return _difficulty;
     }
 
+    // sets the difficulty for the next game
     public void SetDifficulty(string difficulty)
     {
         _difficulty = difficulty;
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
         return _lastPlay;
     }
 
+    // sets the message from the last game
     public void SetLastPlayMessage(string lastPlay)
     {
         _lastPlay = lastPlay;

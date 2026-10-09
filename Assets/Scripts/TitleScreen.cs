@@ -11,6 +11,7 @@ public class TitleScreen : MonoBehaviour
     public string[] buttonDifficulties;
     public TextMeshProUGUI text;
 
+    // sets up camera colors, button listeners, and on-screen text
     void Start()
     {
         Camera.main.backgroundColor = Color.black;

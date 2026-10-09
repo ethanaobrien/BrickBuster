@@ -77,6 +77,7 @@ public class Game : MonoBehaviour
     // HUD style, created lazily on first draw (GUI code must run inside OnGUI)
     private GUIStyle _hudStyle;
 
+    // called on startup. Sets up and begins the game
     private void Start()
     {
         var camera = Camera.main;
@@ -219,6 +220,7 @@ public class Game : MonoBehaviour
         _direction = new Vector2(0, -1);
     }
 
+    // called once per frame, processed ball / paddle movement
     private void Update()
     {
         var keyboard = Keyboard.current;
