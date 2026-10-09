@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    // this is called before any other Start, so we can make sure Instance is set here
     void Awake()
     {
         if (Instance == null)
