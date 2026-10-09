@@ -1,0 +1,20 @@
+# Unity-generated cache and build
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Editor files
+.idea/
+
+# Solution and project files (unity stuff)
+*.csproj
+*.sln
+*.suo
+
+# OS junk
+.DS_Store
+Thumbs.db

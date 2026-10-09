@@ -1,0 +1,45 @@
+using UnityEngine;
+
+// survives scene loads. carries the chosen difficulty and last-game result between scenes
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private string _difficulty = "Easy";
+    private string _lastPlay = "";
+
+    // the difficulty chosen on the title screen: "Easy", "Medium", "Hard" or "Expert"
+    public string GetDifficulty()
+    {
+        return _difficulty;
+    }
+
+    public void SetDifficulty(string difficulty)
+    {
+        _difficulty = difficulty;
+    }
+
+    // win/loss message from the last game, shown again on the title screen
+    public string GetLastPlayMessage()
+    {
+        return _lastPlay;
+    }
+
+    public void SetLastPlayMessage(string lastPlay)
+    {
+        _lastPlay = lastPlay;
+    }
+}
